@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+body {
+  background: "#fff";
+}
+
+@font-face {
+  font-family: "Sansita Swashed";
+  src: url("/src/assets/fonts/sansitaFont/static/SansitaSwashed-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansita Swashed";
+  src: url("/src/assets/fonts/SansitaSwashed-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sansita Swashed";
+  src: url("/src/assets/fonts/sansitaFont/static/SansitaSwashed-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansita Swashed";
+  src: url("/src/assets/fonts/sansitaFont/static/SansitaSwashed-Italic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("/src/assets/fonts/avenir/AvenirLTStd-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("/src/assets/fonts/avenir/AvenirLTStd-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("/src/assets/fonts/avenir/AvenirLTStd-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Global Styles */
+@layer base {
+  /* Reset default margins and paddings */
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
