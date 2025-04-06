@@ -1,31 +1,35 @@
-// components/AIEngagementSection.tsx
 import React from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
-const AIEngagementSection: React.FC = () => {
+const AIEngagementSection: React.FC<{
+  lottieAnimationPath?: string;
+}> = ({ lottieAnimationPath = "./" }) => {
   return (
     <section
       className="relative w-full py-6 px-3 xs:py-8 xs:px-4 sm:py-12 sm:px-6 md:py-16 md:px-8 lg:py-24"
       style={{ backgroundColor: "#F78764" }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 xs:gap-6">
-        {/* Circular Element */}
+        {/* Lottie Animation */}
         <div className="w-full md:w-1/3 flex justify-center items-center relative mt-4 xs:mt-6 sm:mt-8 md:mt-0 order-2 md:order-1">
-          <div
-            className="absolute w-[80px] h-[80px] xs:w-[100px] xs:h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] rounded-full blur-2xl"
-            style={{ backgroundColor: "rgba(235, 235, 211, 0.1)" }}
-          ></div>
-          <div
-            className="absolute w-[60px] h-[60px] xs:w-[80px] xs:h-[80px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-full blur-xl"
-            style={{ backgroundColor: "rgba(235, 235, 211, 0.2)" }}
-          ></div>
-          <div
-            className="absolute w-[40px] h-[40px] xs:w-[50px] xs:h-[50px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] lg:w-[150px] lg:h-[150px] rounded-full z-10 flex items-center justify-center"
-            style={{ backgroundColor: "rgba(235, 235, 211, 0.3)" }}
-          >
+          <div className="relative w-[80px] h-[104px] xs:w-[100px] xs:h-[130px] sm:w-[150px] sm:h-[195px] md:w-[200px] md:h-[260px] lg:w-[250px] lg:h-[325px]">
+            {/* Background blur effects */}
             <div
-              className="w-[12px] h-[12px] xs:w-[15px] xs:h-[15px] sm:w-[25px] sm:h-[25px] md:w-[30px] md:h-[30px] rounded-full"
-              style={{ backgroundColor: "#EBEBD3" }}
+              className="absolute inset-0 w-full h-full rounded-full blur-2xl"
+              style={{ backgroundColor: "rgba(235, 235, 211, 0.1)" }}
             ></div>
+            <div
+              className="absolute inset-0 w-[80%] h-[80%] mx-auto my-auto rounded-full blur-xl"
+              style={{ backgroundColor: "rgba(235, 235, 211, 0.2)" }}
+            ></div>
+
+            {/* Lottie Animation */}
+            <DotLottieReact
+              src={lottieAnimationPath}
+              autoplay
+              loop
+              className="w-full h-full z-10 relative"
+            />
           </div>
         </div>
 
